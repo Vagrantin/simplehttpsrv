@@ -47,7 +47,7 @@ async fn handle_request(
 #[tokio::main]
 async fn main() {
     let addr = SocketAddr::from(([127, 0, 0, 1], 3000));
-    let base_path = Arc::new(PathBuf::from("./DashOut")); // Change this to your static files directory
+    let base_path = Arc::new(PathBuf::from("./static")); // Change this to your static files directory
 
     let make_svc = make_service_fn(move |_conn| {
         let base_path = Arc::clone(&base_path);
